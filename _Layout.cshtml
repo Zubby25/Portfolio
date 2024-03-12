@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" type="text/css" href="~/Content/Site.css">
+    <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Baloo+Chettan+2|Tangerine&display=swap" rel="stylesheet">
+    <link rel="icon" href="~/Content/img/logo.jpg">
+    @Styles.Render("~/Content/Site.css")
+    @Scripts.Render("~/bundles/main")
+</head>
+<body>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+    <header>
+        <img class="logo" src="~/Content/img/logo.jpg">
+        <h7>&lt;/WELCOME&gt;</h7>
+        <nav>
+            <ul>
+                <li><a href="@Url.Action("Index", "Home")">Home</a></li>
+                <li><a href="@Url.Action("Portfolio", "Home")">Portfolio</a></li>
+                <li><a href="https://drive.google.com/file/d/1Snxjsq42SebZNxAXArEh3emsBUvx9nOT/view?usp=sharing">Resume</a></li>
+            </ul>
+        </nav>                                
+    </header>
+    @RenderBody()
+<footer id="f">
+    <img class="flogo" src="~/Content/img/logo.jpg">
+    <div class="link">
+        <a class="footer-link" href="@Url.Action("Index", "Home")">Home</a>
+        <a class="footer-link" href="@Url.Action("Portfolio", "Home")">Portfolio</a>
+        <a class="footer-link" href="https://drive.google.com/file/d/1Snxjsq42SebZNxAXArEh3emsBUvx9nOT/view?usp=sharing">Resume</a>
+    </div>                    
+    <div class="footer-social-icons">
+        <ul>
+            @*<li><a href="https://www.github.com/vikalp2502"><i class="fa fa-github" aria-hidden="true"></i></a></li>*@
+            <li><a href="https://www.linkedin.com/in/mogammad-zubair-esau-451b6a198/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+            @*<li><a href="https://www.instagram.com/vikalp._.kaushik/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>*@
+        </ul>
+    </div>
+</footer>
+    <script type="text/javascript" src="~/Scripts/main.js"></script>
+</body>
+</html>
