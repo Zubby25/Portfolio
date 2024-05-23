@@ -1,41 +1,52 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Zubair Portfolio</title>
-	<link rel="stylesheet" type="text/css" href="style.css">
-	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Montserrat|Baloo+Chettan+2|Tangerine&display=swap" rel="stylesheet">
-	<link rel="icon" href="logo.jpg">
-	
-
-</head>
-<body>
-	<header>
-		  <div class="logo-container">
-            <img class="logo" src="logo.jpg" alt="Logo">
-        </div>
-		<div class= "greeting">
-		<h7>&lt;/WELCOME&gt;</h7>
-		</div>
-		<nav>
-		<ul>
-			<li><a class="active" href="index.html">Home</a></li>
-			<li><a href="portfolio.html">Projects</a></li>
-			<li><a href="https://drive.google.com/file/d/1OC3_JQNOhrOXbismJA9t_NuyGn2Qzh3c/view?usp=drive_link">Resume</a></li>
-		</ul>
-        </nav>
-	</header>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Zubair Portfolio</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat|Baloo+Chettan+2|Tangerine&display=swap" rel="stylesheet">
+    </head>
+    
+    <body>
+        <header class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+                <img class="logo" src="logo.jpg" alt="Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="portfolio.html">Projects</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://drive.google.com/file/d/1OC3_JQNOhrOXbismJA9t_NuyGn2Qzh3c/view?usp=drive_link">Resume</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="ml-auto">
+                <span class="navbar-text">&lt;/WELCOME&gt;</span>
+            </div>
+        </header>
+    
+    
 	<div class="top-container">
 		<div class="Intro">
 			<h1>I'm Mogammad Zubair Esau</h1>
 	        <p id="p1">Developer Intern</p> 
 		</div>
 	</div>
-		
+	<br>
+    <br>	
 	<div class="middle-container">
         <div class="profile">
-    		<img class="midlogo" src="logo.jpg" alt="profilepic">
+    		<img class="logo" src="logo.jpg" alt="Logo">
     		<h2>Welcome To My Profile !</h2>
 		
     		<p class="p2"> Dedicated IT Intern with a solid understanding in application development and a passion for leveraging emerging
@@ -46,7 +57,9 @@
 			and adaptability to every project. My expertise extends to database management systems such as MySQL and Entity Frameworks, ensuring seamless data integration and retrieval. 
 </p>
   		</div>
-  		<hr>
+  	<br>
+    <br>
+    
      <div class="skills">
      <br />
      <br />
@@ -73,7 +86,7 @@
      <br />
      <div>
          <h3>Other Proficiencies</h3>
-        <br />
+         <br />
          <div class="marquee">
             <div class="marquee-content">
                 <img class="skill_img" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/mysql/mysql.png" alt="MySQL">
@@ -138,7 +151,10 @@
      <br />
  </div>    
  <br>
-        <a class="btn" href="portfolio.html">My Projects</a>
+ 
+      <div id="port" class="porti">
+          <a class="btn" href="portfolio.html">My Projects</a>
+      </div>
     	<hr>
     	<div id="contact" class="contact-me">
         	<h2>Get In Touch</h2>
@@ -148,22 +164,19 @@
   		</div>
   	</div>
 	
-    <footer id="f">
-		<img class="flogo" src="logo.jpg">
-		<div class="link">
-  			<a class="footer-link" href="index.html">Home</a>
-  			<a class="footer-link" href="portfolio.html">Portfolio</a>
-  			<a class="footer-link" href="https://drive.google.com/file/d/1Snxjsq42SebZNxAXArEh3emsBUvx9nOT/view?usp=sharing">Resume</a>
-  		</div>
-  		<div class="footer-social-icons">
+      <footer class="bg-dark text-light text-center py-4">
+        <div class="container">
+            <p>&copy; Mogammad Zubair Esau </p>
+        </div>
+        <div class="footer-social-icons">
         	<ul>
 		       
 		        <li><a href="https://www.linkedin.com/in/mogammad-zubair-esau-451b6a198/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
 		    
         	</ul>
   		</div>
- 	
-	</footer>
+    </footer>
+
 	
 	
 <script type="text/javascript" src="main.js"></script>
