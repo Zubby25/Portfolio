@@ -1,70 +1,20 @@
-function myFunction(x) {
-    if (x.matches) {
-        var layer1 = document.getElementById('bottom-cloud')
-        scroll = window.pageYOffset;
-        document.addEventListener('scroll', function (e) {
-            var offset = window.pageYOffset;
-            scroll = offset;
-            layer1.style.left = (3 + scroll / 30) + '%';
-        });
+function animateClouds() {
+    const bottomCloud = document.getElementById('bottom-cloud');
+    const topCloud = document.getElementById('top-cloud');
+    const mountain = document.getElementById('mountain');
+    const scrollOffset = window.pageYOffset;
 
-        var layer2 = document.getElementById('top-cloud')
-        scroll = window.pageYOffset;
-        document.addEventListener('scroll', function (e) {
-            var offset = window.pageYOffset;
-            scroll = offset;
-            layer2.style.left = (70 + scroll / 30) + '%';
-
-        });
-        var layer3 = document.getElementById('mountain')
-        scroll = window.pageYOffset;
-        document.addEventListener('scroll', function (e) {
-            var offset = window.pageYOffset;
-            scroll = offset;
-            layer3.style.top = (55 + scroll / 30) + '%';
-        });
-    }
-    else {
-        var layer1 = document.getElementById('bottom-cloud')
-        scroll = window.pageYOffset;
-        document.addEventListener('scroll', function (e) {
-            var offset = window.pageYOffset;
-            scroll = offset;
-            layer1.style.left = (15 + scroll / 30) + '%';
-        });
-
-        var layer2 = document.getElementById('top-cloud')
-        scroll = window.pageYOffset;
-        document.addEventListener('scroll', function (e) {
-            var offset = window.pageYOffset;
-            scroll = offset;
-            layer2.style.left = (75 + scroll / 30) + '%';
-
-        });
-
-        var layer3 = document.getElementById('mountain')
-        scroll = window.pageYOffset;
-        document.addEventListener('scroll', function (e) {
-            var offset = window.pageYOffset;
-            scroll = offset;
-            layer3.style.top = (41 + scroll / 10) + '%';
-        });
-    }
-}
-
-if (matchMedia) {
-    const x = window.matchMedia("(max-width: 1050px)");
-    x.addListener(myFunction);
-    myFunction(x);
+    bottomCloud.style.left = `${15 + scrollOffset / 30}%`;
+    topCloud.style.left = `${75 + scrollOffset / 30}%`;
+    mountain.style.top = `${41 + scrollOffset / 10}%`;
 }
 
 function animateSkills() {
-    var skills = document.querySelector('.skills');
-    var skillsTop = skills.getBoundingClientRect().top;
-    var windowHeight = window.innerHeight;
-    var scrollTop = window.scrollY || window.pageYOffset;
+    const skills = document.querySelector('.skills');
+    const skillsTop = skills.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY || window.pageYOffset;
 
-    // If the top of the skills section is visible in the viewport
     if (skillsTop < windowHeight && skillsTop + skills.offsetHeight > 0) {
         skills.classList.add('animate');
     } else {
@@ -72,16 +22,12 @@ function animateSkills() {
     }
 }
 
-window.addEventListener('scroll', animateSkills);
-
-
 function animateProfile() {
-    var profile = document.querySelector('.profile');
-    var profileTop = profile.getBoundingClientRect().top;
-    var windowHeight = window.innerHeight;
-    var scrollTop = window.scrollY || window.pageYOffset;
+    const profile = document.querySelector('.profile');
+    const profileTop = profile.getBoundingClientRect().top;
+    const windowHeight = window.innerHeight;
+    const scrollTop = window.scrollY || window.pageYOffset;
 
-    // If the top of the skills section is visible in the viewport
     if (profileTop < windowHeight && profileTop + profile.offsetHeight > 0) {
         profile.classList.add('animate');
     } else {
@@ -89,89 +35,35 @@ function animateProfile() {
     }
 }
 
-window.addEventListener('scroll', animateProfile);
+function animateProjects(entries, observer) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('animate');
+        }
+    });
+}
 
+const projectsObserver = new IntersectionObserver(animateProjects);
 
 document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
+    const x = window.matchMedia("(max-width: 1050px)");
+
+    x.addListener(() => {
+        if (x.matches) {
+            window.addEventListener('scroll', animateClouds);
+        } else {
+            window.removeEventListener('scroll', animateClouds);
+        }
     });
 
-    const projects = document.querySelectorAll('.project1');
+    window.addEventListener('scroll', () => {
+        animateSkills();
+        animateProfile();
+    });
+
+    const projects = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5');
     projects.forEach(project => {
-        observer.observe(project);
-    });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    });
-
-    const projects = document.querySelectorAll('.project2');
-    projects.forEach(project => {
-        observer.observe(project);
-    });
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    });
-
-    const projects = document.querySelectorAll('.project3');
-    projects.forEach(project => {
-        observer.observe(project);
-    });
-});
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    });
-
-    const projects = document.querySelectorAll('.project4');
-    projects.forEach(project => {
-        observer.observe(project);
-    });
-});
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('animate');
-            }
-        });
-    });
-
-    const projects = document.querySelectorAll('.project5');
-    projects.forEach(project => {
-        observer.observe(project);
+        projectsObserver.observe(project);
     });
 });
 
