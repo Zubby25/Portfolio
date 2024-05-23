@@ -110,7 +110,7 @@ h2 {
     text-align: justify;
 }	
 
-.p3{
+.p5{
     line-height: 2;
     font-family: 'Montserrat', sans-serif;
 }
@@ -167,7 +167,7 @@ h2 {
 .project4 {
     width: 100%;
     height: auto;
-    background: #7B9004;
+    background: #dbdecc;
   overflow: hidden; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   opacity: 0;
@@ -182,7 +182,7 @@ h2 {
 .project5 {
     width: 100%;
     height: auto;
-    background: #f76160;
+    background: #f1aaaa;
   overflow: hidden; 
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
    opacity: 0;
@@ -289,6 +289,12 @@ h2 {
         }
 
 
+        .content{
+            text-align: center;
+        }
+
+
+
 /* Media queries for responsiveness */
 @media screen and (min-width: 768px) {
     /* Adjustments for larger screens */
@@ -341,7 +347,7 @@ h2 {
     text-align: justify;
 	}
 
-    .p3{
+    .p5{
         line-height: 2;
         font-family: 'Montserrat', sans-serif;
     }
