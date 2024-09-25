@@ -219,8 +219,8 @@ h2 {
     transform: translateY(50px);
     transition: opacity 0.6s ease, transform 0.6s ease;
 }	
-	.project6.animate {
-    opacity: 2;
+.project7.animate {
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -238,11 +238,13 @@ h2 {
 .project1 .project_img,
 .project3 .project_img,
 .project4 .project_img,
-.project5 .project_img {
+.project5 .project_img,
+
+{
   max-width: 450px; 
  
 }
-	
+
 .contact-me {
     width: 100%;
     
@@ -469,7 +471,4 @@ h2 {
 
 
 }
-
-
-
 
