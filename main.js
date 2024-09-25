@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animateProfile();
     });
 
-    const projects = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5, .project6');
+    const projects = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5, .project6, .project7');
     projects.forEach(project => {
         projectsObserver.observe(project);
     });
