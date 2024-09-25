@@ -209,6 +209,21 @@ h2 {
     transform: translateY(0);
 }
 
+.project7 {
+    width: 100%;
+    height: auto;
+    background: #7a88a5;
+  overflow: hidden; 
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+   opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}	
+	.project6.animate {
+    opacity: 2;
+    transform: translateY(0);
+}
+
 	
 .project_img {
      width: 100%;
@@ -454,5 +469,7 @@ h2 {
 
 
 }
+
+
 
 
